@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         final ConstraintLayout sydney = findViewById(R.id.sydneykl);
         final ConstraintLayout nyc = findViewById(R.id.nyc);
+        final ConstraintLayout london = findViewById(R.id.london);
+        final ConstraintLayout tokyo = findViewById(R.id.tokyo);
 
         final Thread t = new Thread() {
             @Override
@@ -44,15 +46,40 @@ public class MainActivity extends AppCompatActivity {
 
                                 TextView nyct = nyc.findViewById(R.id.nyck);
                                 SimpleDateFormat ndf = new SimpleDateFormat("MMM dd yyyy\nh:mm:ss a");
-                                ndf.setTimeZone(TimeZone.getTimeZone("Europe/London"));
+                                ndf.setTimeZone(TimeZone.getTimeZone("America/New_York"));
                                 String nycDateandTime = ndf.format(new Date());
                                 nyct.setText(nycDateandTime);
 
                                 TextView nyct2 = nyc.findViewById(R.id.nyck2);
                                 SimpleDateFormat pdf = new SimpleDateFormat("MMM dd yyyy\nHH:mm:ss");
-                                pdf.setTimeZone(TimeZone.getTimeZone("Europe/London"));
+                                pdf.setTimeZone(TimeZone.getTimeZone("America/New_York"));
                                 String nycdate2= pdf.format(new Date());
                                 nyct2.setText(nycdate2);
+
+                                TextView londont = london.findViewById(R.id.londont);
+                                SimpleDateFormat odf = new SimpleDateFormat("MMM dd yyyy\nh:mm:ss a");
+                                odf.setTimeZone(TimeZone.getTimeZone("Europe/London"));
+                                String londonto = odf.format(new Date());
+                                londont.setText(londonto);
+
+                                TextView londont2 = london.findViewById(R.id.londont1);
+                                SimpleDateFormat odf2 = new SimpleDateFormat("MMM dd yyyy\nHH:mm:ss");
+                                odf2.setTimeZone(TimeZone.getTimeZone("Europe/London"));
+                                String londonto2 = odf2.format(new Date());
+                                londont2.setText(londonto2);
+
+                                TextView tokyot = tokyo.findViewById(R.id.tokyot);
+                                SimpleDateFormat tdf = new SimpleDateFormat("MMM dd yyyy\nh:mm:ss a");
+                                tdf.setTimeZone(TimeZone.getTimeZone("Asia/Tokyo"));
+                                String tt = tdf.format(new Date());
+                                tokyot.setText(tt);
+
+                                TextView tokyot1 = tokyo.findViewById(R.id.tokyot2);
+                                SimpleDateFormat tdf2 = new SimpleDateFormat("MMM dd yyyy\nHH:mm:ss");
+                                tdf2.setTimeZone(TimeZone.getTimeZone("Asia/Tokyo"));
+                                String tt2 = tdf2.format(new Date());
+                                tokyot1.setText(tt2);
+
                             }
                         });
                     }
@@ -80,6 +107,16 @@ public class MainActivity extends AppCompatActivity {
                     nyck.setVisibility(View.INVISIBLE);
                     TextView nyct2 = nyc.findViewById(R.id.nyck2);
                     nyct2.setVisibility(View.VISIBLE);
+
+                    TextView l1 = london.findViewById(R.id.londont);
+                    l1.setVisibility(View.INVISIBLE);
+                    TextView l2 = london.findViewById(R.id.londont1);
+                    l2.setVisibility(View.VISIBLE);
+
+                    TextView t1 = tokyo.findViewById(R.id.tokyot);
+                    t1.setVisibility(View.INVISIBLE);
+                    TextView t2 = tokyo.findViewById(R.id.tokyot2);
+                    t2.setVisibility(View.VISIBLE);
                 } else {
                     TextView textView = sydney.findViewById(R.id.sydneyk);
                     textView.setVisibility(View.VISIBLE);
@@ -90,6 +127,16 @@ public class MainActivity extends AppCompatActivity {
                     nyck.setVisibility(View.VISIBLE);
                     TextView nyct2 = nyc.findViewById(R.id.nyck2);
                     nyct2.setVisibility(View.INVISIBLE);
+
+                    TextView l1 = london.findViewById(R.id.londont);
+                    l1.setVisibility(View.VISIBLE);
+                    TextView l2 = london.findViewById(R.id.londont1);
+                    l2.setVisibility(View.INVISIBLE);
+
+                    TextView t1 = tokyo.findViewById(R.id.tokyot);
+                    t1.setVisibility(View.VISIBLE);
+                    TextView t2 = tokyo.findViewById(R.id.tokyot2);
+                    t2.setVisibility(View.INVISIBLE);
                 }
             }
 

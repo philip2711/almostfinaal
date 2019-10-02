@@ -30,5 +30,32 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sydneykl" />
 
+        <include
+            android:id="@+id/london"
+            layout="@layout/london"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nyc" />
+
+        <include
+            android:id="@+id/tokyo"
+            layout="@layout/tokyo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/london" />
+
+        <include
+            android:id="@+id/dubai"
+            layout="@layout/dubai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tokyo" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
