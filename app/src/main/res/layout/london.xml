@@ -13,38 +13,50 @@ android:layout_height="match_parent">
         android:scaleType="centerCrop"
         android:tint="#6F000000"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/nyck2"
         app:srcCompat="@drawable/london" />
 
     <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="London"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/londont"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/londont"
-        android:layout_width="409dp"
+        android:layout_width="250dp"
         android:layout_height="150dp"
         android:alpha="1"
         android:gravity="center_horizontal|center_vertical"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat.Display4"
         android:textColor="#FFFFFF"
-        android:textSize="50sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-    android:id="@+id/londont1"
-    android:layout_width="409dp"
-    android:layout_height="150dp"
-    android:gravity="center_horizontal|center_vertical"
-    android:text="TextView"
-    android:textAllCaps="false"
-    android:textAppearance="@style/TextAppearance.AppCompat.Display4"
-    android:textColor="#FFFFFF"
-    android:textSize="50sp"
-    android:visibility="invisible"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/londont1"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="TextView"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

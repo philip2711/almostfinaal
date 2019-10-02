@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         final ConstraintLayout nyc = findViewById(R.id.nyc);
         final ConstraintLayout london = findViewById(R.id.london);
         final ConstraintLayout tokyo = findViewById(R.id.tokyo);
+        final ConstraintLayout dubai = findViewById(R.id.dubai);
 
         final Thread t = new Thread() {
             @Override
@@ -80,6 +81,17 @@ public class MainActivity extends AppCompatActivity {
                                 String tt2 = tdf2.format(new Date());
                                 tokyot1.setText(tt2);
 
+                                TextView d = dubai.findViewById(R.id.dubait);
+                                SimpleDateFormat ddf = new SimpleDateFormat("MMM dd yyyy\nh:mm:ss a");
+                                ddf.setTimeZone(TimeZone.getTimeZone("Asia/Dubai"));
+                                String dt = ddf.format(new Date());
+                                d.setText(dt);
+
+                                TextView du = dubai.findViewById(R.id.dubait2);
+                                SimpleDateFormat ddf2 = new SimpleDateFormat("MMM dd yyyy\nHH:mm:ss");
+                                ddf2.setTimeZone(TimeZone.getTimeZone("Asia/Dubai"));
+                                String ddft = ddf2.format(new Date());
+                                du.setText(ddft);
                             }
                         });
                     }
@@ -117,6 +129,11 @@ public class MainActivity extends AppCompatActivity {
                     t1.setVisibility(View.INVISIBLE);
                     TextView t2 = tokyo.findViewById(R.id.tokyot2);
                     t2.setVisibility(View.VISIBLE);
+
+                    TextView d1 = dubai.findViewById(R.id.dubait);
+                    d1.setVisibility(View.INVISIBLE);
+                    TextView d2 = dubai.findViewById(R.id.dubait2);
+                    d2.setVisibility(View.VISIBLE);
                 } else {
                     TextView textView = sydney.findViewById(R.id.sydneyk);
                     textView.setVisibility(View.VISIBLE);
@@ -137,6 +154,11 @@ public class MainActivity extends AppCompatActivity {
                     t1.setVisibility(View.VISIBLE);
                     TextView t2 = tokyo.findViewById(R.id.tokyot2);
                     t2.setVisibility(View.INVISIBLE);
+
+                    TextView d1 = dubai.findViewById(R.id.dubait);
+                    d1.setVisibility(View.VISIBLE);
+                    TextView d2 = dubai.findViewById(R.id.dubait2);
+                    d2.setVisibility(View.INVISIBLE);
                 }
             }
 
